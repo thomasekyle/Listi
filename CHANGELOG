@@ -1,0 +1,15 @@
+5/30/2016
+-Added Search function to users
+-Added Search function to listings
+-Added transfer user listings on delete
+-Added delete listings and listing pictures on delete.
+-Added website settings editor for front pages and other website aspect.
+-Updated various back end and front end layouts.
+-Updated various methods and controllers.
+
+9/16/2016
+-Reworked Logic into Services methods
+-Reworked validation into ListingRequest for ListingController
+-Cleaned up the ListingController
+-Moved a lot of logic to service classes
+-Reworked class design in app folder
