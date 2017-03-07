@@ -4,6 +4,14 @@
 -Changed dashboard layouts for certain pages
 -Added ability to change home page, with customer HTML
 
+-------
+
+9/16/2016
+-Reworked Logic into Services methods
+-Reworked validation into ListingRequest for ListingController
+-Cleaned up the ListingController
+-Moved a lot of logic to service classes
+-Reworked class design in app folder
 
 5/30/2016
 -Added Search function to users
@@ -14,9 +22,4 @@
 -Updated various back end and front end layouts.
 -Updated various methods and controllers.
 
-9/16/2016
--Reworked Logic into Services methods
--Reworked validation into ListingRequest for ListingController
--Cleaned up the ListingController
--Moved a lot of logic to service classes
--Reworked class design in app folder
+
