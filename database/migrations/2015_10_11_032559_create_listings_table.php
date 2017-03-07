@@ -17,7 +17,7 @@ class CreateListingsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('unit_name');
-            $table->string('available')
+            $table->string('available');
             $table->date('date_available');
             $table->string('house_number');
             $table->string('street_name');
@@ -33,7 +33,7 @@ class CreateListingsTable extends Migration
             $table->string('bathrooms');
             $table->integer('featured_pic');
             $table->integer('pic_num');
-            $table->string('description');
+            $table->longtext('description');
             $table->string('search_query');
             $table->timestamp('added_on');
             $table->timestamps();

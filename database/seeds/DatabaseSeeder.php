@@ -33,8 +33,8 @@ class UserTableSeeder extends Seeder
         DB::table('password_resets')->delete();
         DB::table('site_settings')->delete();
         DB::table('email_settings')->delete();
-        DB::table('listing_picture')->delete();
-        DB::table('user_files')
+        DB::table('listing_pictures')->delete();
+        DB::table('user_files');
 
         //Create the first user for Hank Mess
         $user1 = User::create(array(
@@ -47,7 +47,8 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('pleasechangeme'),
             'description' => 'The account for Web Admin',
             'active' => '1',
-            'properties' => '0',
+            'properties' => '4',
+            'privilege' => 'Administrator',
             'can_mod_user' => 1,
             'can_mod_site' => 1
             ));
@@ -66,7 +67,7 @@ class UserTableSeeder extends Seeder
             'state' => 'North Carolina',
             'zip' => '28213',
             'subdivision' => 'Gleeful Greens',
-            'sqaure_feet' => '2050',
+            'square_feet' => '2050',
             'type' => 'For Sale',
             'price' => '300000',
             'bedrooms' => '5',
@@ -86,7 +87,7 @@ class UserTableSeeder extends Seeder
             'state' => 'North Carolina',
             'zip' => '28213',
             'subdivision' => 'Gleeful Greens',
-            'sqaure_feet' => '2010',
+            'square_feet' => '2010',
             'type' => 'For Sale',
             'price' => '250000',
             'bedrooms' => '4',
@@ -105,7 +106,7 @@ class UserTableSeeder extends Seeder
             'state' => 'North Carolina',
             'zip' => '28213',
             'subdivision' => 'Gleeful Greens',
-            'sqaure_feet' => '2010',
+            'square_feet' => '2010',
             'type' => 'For Sale',
             'price' => '450000',
             'bedrooms' => '4',
@@ -123,7 +124,7 @@ class UserTableSeeder extends Seeder
             'state' => 'North Carolina',
             'zip' => '28213',
             'subdivision' => 'Gleeful Greens',
-            'sqaure_feet' => '2010',
+            'square_feet' => '2010',
             'type' => 'For Sale',
             'price' => '450000',
             'bedrooms' => '4',
@@ -146,6 +147,11 @@ class UserTableSeeder extends Seeder
             'company_zip' => '28213',
             'http_link' => 'http://localhost:8000',
             'http_link2' => 'http://localhost',
+            'header_title' => 'Welcome to Your Website!',
+            'header_text' => 'You can add or change the details about you website here.',
+            'front_page_html' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            \n\n
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
         ));
     }
 }

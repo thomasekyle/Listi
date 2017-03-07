@@ -34,10 +34,10 @@
         <div class="panel-heading">
           <div class="row">
             <div class="col-xs-3">
-              <h4 class="glyphicon glyphicon-user fa-lg" aria-hidden="true"> {{$user->properties}}</h4>
+              <h4 class="glyphicon glyphicon-user fa-lg" aria-hidden="true"></h4>
             </div>
             <div class="col-xs-9 text-right">
-              <div class="huge">{{$user->fname}} {{$user->lname}}</div>
+              <div class="huge">{{$user->first_name}} {{$user->last_name}}</div>
               <div><b>{{$user->privilege}}</b></div>
             </div>
           </div>

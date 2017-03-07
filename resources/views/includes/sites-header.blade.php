@@ -55,7 +55,7 @@
                       @if (Auth::check())
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                      <span class="glyphicon glyphicon-user fa-lg" aria-hidden="true"></span> {{$user->fname}} {{$user->lname}} <span class="caret"></span></a>
+                      <span class="glyphicon glyphicon-user fa-lg" aria-hidden="true"></span> {{$user->first_name}} {{$user->last_name}} <span class="caret"></span></a>
                       <ul class="dropdown-menu">
 
                     <li><a href="/dashboard/home">Go to Dashboard</a></li>

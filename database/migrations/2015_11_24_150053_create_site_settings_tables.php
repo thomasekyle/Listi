@@ -28,6 +28,10 @@ class CreateSiteSettingsTables extends Migration
             $table->string('company_zip');
             $table->string('http_link');
             $table->string('http_link2');
+            $table->longtext('front_page_html');
+            $table->string('front_page_header');
+            $table->string('header_title');
+            $table->longtext('header_text');
             $table->timestamps();
              });
     }

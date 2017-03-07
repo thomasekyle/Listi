@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $tables->integer('site_id');
+            $table->integer('site_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('title');
@@ -24,10 +24,11 @@ class CreateUsersTable extends Migration
             $table->string('feature_picutre');
             $table->string('email')->unique();
             $table->string('password', 60);
-            $table->string('description');
+            $table->longtext('description');
             $table->string('active');
             $table->integer('properties');
             $table->integer('available_properties');
+            $table->string('privilege');
             $table->integer('can_mod_user');
             $table->integer('can_mod_site');
             $table->timestamp('added_on');

@@ -24,8 +24,10 @@
 
 
 
-
-  {!! $sitesettings->front_page_html !!}
+<div class="container">
+    <div class="col-md-10">{!! $sitesettings->front_page_html !!}</div>
+</div>
+  
 
 
 
