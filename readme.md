@@ -7,11 +7,11 @@ Listi is a property management website application built using the Laravel (5.1 
 <p>Database config can be found in the config folder named database.php. You can use MySQL, MariaDB, SQLite or whatever you prefer.
 </p>
 
-    git clone https://github.com/thomasekyle/PureBlog.git
+    git clone https://github.com/thomasekyle/Listi.git
     php artisan migrate
     php artisan db:seed
   
-<p>Default account will be webadmin@pureblog.com. Password is pleasechangeme</p>
+<p>Default account will be webadmin@listi.us. Password is pleasechangeme</p>
 <p>You will get a default post, and blog details. You can change these as necessary.</p>
 
 ## Bugs
