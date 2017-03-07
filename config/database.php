@@ -57,7 +57,7 @@ return [
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'Listi'),
             'username'  => env('DB_USERNAME', 'Listi'),
-            'password'  => env('DB_PASSWORD', 'Ac3ez+o07yQ!p5Ic?5v4@9pa3x'),
+            'password'  => env('DB_PASSWORD', 'pleaschangeme'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

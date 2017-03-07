@@ -16,7 +16,6 @@ use App\Listing;
 use Http\Controllers\AuthController;
 use Http\Controllers\PasswordController;
 
-
 //////////////////////////////////////////////////////
 //  Login and Restration Routes
 /////////////////////////////////////////////////////
@@ -84,6 +83,7 @@ Route::get('/dashboard/users/create', 'UserController@create');
 Route::post('/dashboard/users/store', 'UserController@store');
 Route::get('/dashboard/users/edit/{id}','UserController@edit');
 Route::post('/dashboard/users/update/{id}', 'UserController@update');
+Route::post('/dashboard/users/password/update/{id}', 'UserController@updatePassNoCheck');
 Route::get('/dashboard/users/transfer/{id}', 'UserController@transfer');
 Route::post('/dashboard/users/delete/{id}', 'UserController@destroy');
 
@@ -103,6 +103,7 @@ Route::post('/dashboard/listing/store', 'ListingController@store');
 Route::get('/dashboard/listing/edit/{id}', 'ListingController@edit');
 Route::post('/dashboard/listing/update/{id}', 'ListingController@update');
 Route::get('/dashboard/listing/delete/{id}', 'ListingController@destroy');
+Route::get('/dashboard/listing/{id}/updatefeatured/{file_id}', 'ListingController@updateFeaturedPic');
 
 //Listing Picture control Routes
 Route::post('/dashboard/listing/picture/update', 'ListingPicController@update');
@@ -110,12 +111,4 @@ Route::get('/dashboard/listing/picture/delete/{id}', 'ListingPicController@destr
 
 Route::get('/create/listing', 'ListingController@create');
 
-});
-
-
-
-Route::get('contact', function()
-{
-    $sitesettings = SiteSettings::find(1);
-    return View::make('pages.contact' ,compact('sitesettings'));
 });

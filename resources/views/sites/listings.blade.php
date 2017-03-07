@@ -2,7 +2,14 @@
 @section('content')
 <br><br><br><br><br><br>
 <div class="container">
-@foreach ($listings as $listing)
+  @foreach ($listings as $listing)
+  <div class="row">
+    <div class="col-md-12">
+
+      <h2>{{ $listing-> house_num }} {{ $listing->street_name }} {{ $listing->city }}, {{$listing->state}}, {{$listing->zip}}</h2>
+
+    </div>
+  </div>
 <div class="row">
   @if ($listing->featured_pic !=0)
   <div class="col-sm-2 col-md-3">
@@ -19,13 +26,6 @@
   @endif
     <div class="col-sm-10 col-md-9">
 
-    <div class="row">
-    <div class="col-md-12">
-
-      <h2>{{ $listing-> house_num }} {{ $listing->street_name }} {{ $listing->city }}, {{$listing->state}}, {{$listing->zip}}</h2>
-
-    </div>
-        </div>
 
 
         <div class="row">

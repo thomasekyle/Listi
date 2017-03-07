@@ -3,10 +3,7 @@
 <div class="container">
 
   <div class="row">
-    @if ( session()->has('message') )
-    <div class="alert alert-success alert-dismissable">{{ session()->get('message') }}</div>
-@endif
-
+  
     <!--<div class="panel-group">-->
     <div class="col-md-6">
       <div class="panel panel-default">

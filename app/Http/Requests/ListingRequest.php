@@ -24,12 +24,12 @@ class ListingRequest extends Request
     public function rules()
     {
         return [
-          'unit_name'     => 'required',
+          'unit_name'     => 'alpha_num',
           'house_num'     => 'required|digits_between:1,10',
           'street_name'   => 'required',
           'apt_num'       => 'alpha_num',
           'city'          => 'required',
-          'state'         => 'required|alpha',
+          'state'         => 'required',
           'zip'           => 'required|digits_between:5,5',
           'sq_ft'         => 'required|digits_between:1,20',
           'price'         => 'required|digits_between:1,20',

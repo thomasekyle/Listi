@@ -29,8 +29,8 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['fname', 'lname', 'birthday', 'phone_number', 'fax',  'email',
-    'description', 'password', 'active', 'privilege'];
+    protected $fillable = ['fname', 'lname', 'birthday', 'phone_number', 'fax_number',  'email',
+    'description', 'active', 'privilege'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -38,6 +38,20 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    ////
+    // Return thr field that can be searched for this model
+    ///
+    public static function getSearchables($request)
+    {
+      $searchable = ['fname', 'lname', 'email'];
+      $searhes[] = array();
+      foreach ($searchable as $s)
+      {
+        $searches[] = $request[$s];
+      }
+      return $searches;
+    }
 
     public static function getPasswordValidator($request)
     {

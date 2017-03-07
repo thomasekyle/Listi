@@ -15,8 +15,6 @@ class CreateListingsTable extends Migration
 
         Schema::create('listings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('site_id');
-            $table->integer('pic_num');
             $table->integer('user_id');
             $table->string('unit_name');
             $table->string('available')
@@ -28,15 +26,15 @@ class CreateListingsTable extends Migration
             $table->string('state');
             $table->string('zip');
             $table->string('subdivision');
-            $table->string('sqaure_feet');
+            $table->string('square_feet');
             $table->string('type');
             $table->string('price');
             $table->string('bedrooms');
             $table->string('bathrooms');
+            $table->integer('featured_pic');
+            $table->integer('pic_num');
             $table->string('description');
             $table->string('search_query');
-            $table->integer('featured_pic');
-            $table->string('featured_filename');
             $table->timestamp('added_on');
             $table->timestamps();
         });

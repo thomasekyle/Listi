@@ -1,3 +1,9 @@
+<nav class"navbar navbar-default navbar-static-top">
+<ul class="nav navvar-nav navbar-right">
+{{$sitesettings-> company_phone_number}}
+</ul>
+</nav>
+
  <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Listing;
+use App\ListingPic;
 use App\Services\ListingServices;
 use Illuminate\Http\Request;
 use Requests;
@@ -74,7 +75,7 @@ class ListingController extends Controller
   {
     $user = \Auth::user();
     $listing = Listing::find($id);
-    $listingpics = \App\ListingPic::where('listing_id', $id)->get();
+    $listingpics = ListingPic::where('listing_id', $id)->get();
     return view('dashboard.listing.edit' ,compact('listing', 'listingpics', 'user'));
   }
 
@@ -99,6 +100,15 @@ class ListingController extends Controller
     return redirect()->action('DashboardController@getDashboard')->with('message', 'Listing was successfully updated.');
   }
 
+  ////
+  //
+  ////
+  public function updateFeaturedPic($id, $file_id)
+  {
+    $listing = Listing::findOrFail($id);
+    $listingservice->updateFeaturedPic($listing, $file_id);
+    return redirect()->action('DashboardController@editListing')->with('message', 'Featured picture updated.')->with($id);
+  }
 
   /**
   * Remove the specified resource from storage.

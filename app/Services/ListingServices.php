@@ -32,14 +32,10 @@ class ListingServices
    $newlisting = new Listing;
    $newlisting->user_id = \Auth::user()->id;
    $newlisting->fill($request->all());
-
-   if ($request->file[0] != null)
-   {
-     $newlisting->num_pics = $this->storePictures($newlisting->id, $request->file);
-   }
-
    $newlisting->search_query = $this->buildQueryString($request);
    $newlisting->save();
+   if (isset($request->file[0]))
+     $newlisting->num_pics = $this->storePictures($newlisting->id, $request->file);
  }
 
 ////
@@ -69,9 +65,9 @@ class ListingServices
 ////
 // Deletes the listing with the specified id and any pictures associated with it
 ///
-public function destroyListing($id)
+public function destroy($id)
 {
-  $listing = Listing::find($id);
+  $listing = Listing::findOrFail($id);
   $listingpic = ListingPic::where('listing_id', $id);
 
   foreach ($listingpic as $lp)
@@ -117,6 +113,14 @@ public function destroyListing($id)
    return count($files);
  }
 
+////
+// Update the featured picture for a listing
+///
+public function updateFeatured($listing, $file_id)
+{
+  $listing->featured_pic = $file_id;
+  $listing->save();
+}
 
 ////
 //User the File Services Class to delete the given listing picture specified

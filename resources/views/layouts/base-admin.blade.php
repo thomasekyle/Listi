@@ -9,11 +9,12 @@
     <header class="row">
         @include('includes.admin-header')
     </header>
-   
+
         <div id="main" class="row">
+            @include('includes.messages')
             @yield('content')
         </div>
-    
+
     <footer class="footer">
         @include('includes.footer')
     </footer>

@@ -83,7 +83,7 @@
               <td>
                 <div class="pull-right">
                   <a href="/dashboard/users/edit/{{$u->id}}" class="btn btn-default btn-sm" type="submit">Edit</a>
-                <a href="/dashboard/users/transfer/{{$u->id }}" class="btn btn-default btn-sm" role="button">Delete</a>
+                <a href="/dashboard/users/transfer/{{$u->id}}" class="btn btn-default btn-sm" role="button">Delete</a>
               </div>
               </td>
 

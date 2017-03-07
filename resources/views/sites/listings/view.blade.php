@@ -95,8 +95,13 @@
 <hr>
 <div style="background-color: #eee;">
 <div class="container">
+
+  <div class="col-md-10 col-md-offset-1">
 <h3>Description</h3>
-  <p>{!! $listing->description !!}</p></div>
+  <p>{!! $listing->description !!}</p>
+
+</div>
+</div>
 </div>
 
 <hr>
