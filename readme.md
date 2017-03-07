@@ -12,7 +12,7 @@ Listi is a property management website application built using the Laravel (5.1 
     php artisan db:seed
   
 <p>Default account will be webadmin@listi.us. Password is pleasechangeme</p>
-<p>You will get a default post, and blog details. You can change these as necessary.</p>
+<p>You will get some default listiing, and company details. You can change these as necessary.</p>
 
 ## Bugs
 
